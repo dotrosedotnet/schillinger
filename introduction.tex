@@ -119,7 +119,7 @@ as a, b, and c, or 1, 3, 5.
 				-\balloonText #'(-1.5 . 0) \markup{"a"}
 				>2
 				<
-				g,-\balloonText #'(0.3 . 0) \markup{"5"} 
+				g,-\balloonText #'(0.3 . 0) \markup{"5"}
 				-\balloonText #'(-0.5 . 0) \markup{"c"}
 				e'-\balloonText #'(0.3 . 0) \markup{"3"} 
 				-\balloonText #'(-0.5 . 0) \markup{"b"}
@@ -710,5 +710,131 @@ art reproduce the laws of development of the universe---not the appearance of
 this development, but the actual processes themselves. This suggests an
 Aristotelian idea. \say{Art imitates nature}, Aristotle wrote, and meant that
 the artist did not copy appearances, but reproduced and perfected nature's
-forms and processes
+forms and processes. Now Schillinger made the interrelation of music and nature
+(of musical forms and natural forms) basic in his thinking. He was continually
+at pains to point out that various musical forms were not purely \ae sthetic
+developments. He reminds, for example, that the canon is to be found in nature
+in the echo. Music imitates nature, and particularly the forms of motion in the
+universe. i.e. the growth and evolution of natural forms. Living fully and
+conceptually in our mathematical universe, Schillinger may be said to have
+given to the Aristotelian idea a materialist interpretation running far beyond
+the ancient concept and bulwarked by extensive musical research.
 
+Now, what relation could be established between musical forms (tonal
+assemblages) and natural forms? Patently, a congruence of structure\dots\ a
+similarity of inner relations\dots\ an equivalence of structural quantities. It
+was relativity that provided foundation ideas for developing this geometrical
+interrelationship.
+
+For our purposes, the significant aspect of relativity is its new treatment of
+time and space. Einstein demonstrated that measurements of space and time are
+not independent and absolute properties of the object measured---but properties
+of the relation between observer and object. Having \say{relatived} all
+measurements by projecting the observer into them, Einstein searched for
+invariant measurements not dependent on the observer. These he discovered by
+emphasizing teh fourth dimension (time) in relation to space. Thus, we no
+longer talk of time and space, but space-time, and we designate events through
+space-time coordinates. Now, Einstein demonstrated that such space-time
+coordinates express both the \textit{metric} properties of space and
+\textit{physical} properties of the natural universe. Nature (including music)
+was grasped as measure relations. In other words, it became possible to study
+natural phenomena---or, as Schillinger concluded, artistic phenomena---through
+analyzing the coincidence and correspondence of their space-time coordinates.
+
+\section{The Graph Method: Music and Motion}
+
+Schillinger's idea was to transform musical qualities into time-space
+structures, i.e., into the geometric relations of their components. How? At
+this juncture the graph method came to Schillinger's aid. Through graphs, music
+could be projected into space, and sonic symbols converted into linear
+configurations. Here, for example, is a graph representation of Bach's
+\textit{Two-Part Invention No. 8}.
+
+\begin{tikzpicture}
+  \begin{axis}
+    [
+	ylabel= Pitch (in half steps),
+	xlabel= Time (in 16th notes),
+	grid=both,
+	ytick distance=12,
+	xtick distance=12,
+	% number of ticks in between grids, 9 ticks = 10 cells
+	minor tick num=11,
+	% define regular grid style with line width and color
+	grid style={line width=.1pt, draw=black!10},
+	% define major grid style with line width and color
+	major grid style={line width=.4pt,draw=black!40},
+	axis y line=left,
+	axis x line=bottom,
+	enlargelimits=false,
+	% define width and height
+	ymin=-3,
+	ymax=15,
+	xmin=-3,
+	xmax=27,
+	yticklabels={0, F4, F5},
+	width=14cm, height=9cm
+    ];
+        \addplot [
+        const plot,
+	fill=black,
+        draw=black,
+	line width=1pt,
+    ] coordinates {
+        (2,0)
+        (4,4)
+        (6,0)
+        (8,7)
+        (10,0)
+        (12,12)
+        (14,11)
+        (15,9)
+        (16,7)
+        (17,9)
+        (18,7)
+        (19,5)
+        (20,4)
+        (21,5)
+        (22,4)
+        (23,2)
+        (24,0)
+	}
+	\closedcycle
+	;
+%	\addplot coordinates {
+%	    (2,   0)
+%	    (4,   0)
+%	    (4,   4)
+%	    (6,   4)
+%	    (6,   0)
+%	    (8,   0)
+%	    (8,   7)
+%	    (10,   7)
+%	    (10,   0)
+%	    (12,   0)
+%	    (12,   12)
+%	    (14,   12)
+%	    (14,   11)
+%	    (15,   11)
+%	    (15,   9)
+%	    (16,   9)
+%	    (16,   7)
+%	    (17,   7)
+%	    (17,   9)
+%	    (18,   9)
+%	    (18,   7)
+%	    (19,   7)
+%	    (19,   5)
+%	    (20,   5)
+%	    (20,   4)
+%	    (21,   4)
+%	    (21,   5)
+%	    (22,   5)
+%	    (22,   4)
+%	    (23,   4)
+%	    (23,   2)
+%	    (24,   2)
+%	    (24,   0)
+%	};
+  \end{axis}
+\end{tikzpicture}

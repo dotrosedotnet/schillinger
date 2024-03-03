@@ -801,40 +801,35 @@ configurations. Here, for example, is a graph representation of Bach's
 	}
 	\closedcycle
 	;
-%	\addplot coordinates {
-%	    (2,   0)
-%	    (4,   0)
-%	    (4,   4)
-%	    (6,   4)
-%	    (6,   0)
-%	    (8,   0)
-%	    (8,   7)
-%	    (10,   7)
-%	    (10,   0)
-%	    (12,   0)
-%	    (12,   12)
-%	    (14,   12)
-%	    (14,   11)
-%	    (15,   11)
-%	    (15,   9)
-%	    (16,   9)
-%	    (16,   7)
-%	    (17,   7)
-%	    (17,   9)
-%	    (18,   9)
-%	    (18,   7)
-%	    (19,   7)
-%	    (19,   5)
-%	    (20,   5)
-%	    (20,   4)
-%	    (21,   4)
-%	    (21,   5)
-%	    (22,   5)
-%	    (22,   4)
-%	    (23,   4)
-%	    (23,   2)
-%	    (24,   2)
-%	    (24,   0)
-%	};
   \end{axis}
 \end{tikzpicture}
+
+\hspace*{0.9cm}\begin{lilypond}
+	\language "english"
+	\score {
+		\new Staff {
+			\omit Staff.BarLine
+			\time 3/4
+			\relative c' {
+				r8 f-. a-. f-. c'-. f,-.
+				f' e16 d c d c bf a bf a g
+			}
+		}
+		\layout {
+			\context {
+				\Score
+				proportionalNotationDuration = #(ly:make-moment 3/45)
+			}
+		}
+	}
+\end{lilypond}
+
+\vspace*{-1ex}
+\begin{center}
+	\small{Barlines omitted to emphasize graph correlation}
+\end{center}
+
+
+\say{\say{Musical motion}, when projected into spatial configuration,} Schillinger writes in Book XI, \say{possesses characteristics similar to that of motion, action, growth, or other eventual processes. It particularly resembles mechanical trajectories and projections of period phenomena, i.e., processes which are characterizerd by a high degree of regularity. As mechanical trajectories are the inherent patterns of \say{musical motion}, music is capable of expressing everything which can be translated in a form of motion.}
+
+Schillinger's statement and the graph vivify one aspect of the relationship between music and motion. It is quite evident that just as music may be projected into a form of motion, so forms of motion may be converted into music. The graph method of notation, i.e., the rectangular projection of music, offers a device for securing congruence of quantity and structure. It offers a new, vivid approach to such problems as variation through inversion, the analysis of melody, the modernization and \say{antiquation} of music, the variation of density in orchestration, the correlation of music and emotion, and other phases of composition. To Schillinger, the problems of musical components therefore presented these general aspects: 1) substituation of a scientif method of recording a musical composition for inadequate systems of notation; 2) modification of a musical work through variation of its geometric properties; and 3) production of music from a system of number values translated into geometric relations and thereafter into corresponding components of the tonal art.

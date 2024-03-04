@@ -16,6 +16,6 @@ worry about spelling and formatting errors too much, so
 expect typos and some weird formatting/page breaks/etc.
 
 I'm writing this in Neovim with a shell script rendering the
-files with `lilypond-book` and `tectonic` on every save.
+files with `lilypond-book` and `lualatex` on every save.
 
 Enjoy!

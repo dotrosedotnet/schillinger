@@ -5,7 +5,7 @@
 
 The customary method of musical notation, which is a product of the \say{trial and error} method, is inadequate for the analysis and study of rhythmic patterns. It offers no common basis for computations. The history of creative experience in music shows that even the greatest composers have been unnecessarily limited in their rhythmic patterns because they thought in terms of ordinary musical notation.\footnote{If, from experience outside the musical field, you already know how graphs are used, it will be sufficient to say at this point that (a) music can be graphed by allowing the lengths of a number of horizontal lines to stand for the \textit{durations} of tones, and causing the distance up or down (ordinate) to stand for the \textit{pitch} levels of the tones; and (b) when graphing duration only, as in these studies, the end of one duration and beginning of the next may be indicated by a \say{turn} (phase change) in the line, as shown in Figure 47. (Ed.)}
 
-The arrangement of tiem-durations, which constitutes the theory of rhythm, may be studied through three parallel systems of notation: (1) numbers, (2) graphs, (3) musical notes.
+The arrangement of time-durations, which constitutes the theory of rhythm, may be studied through three parallel systems of notation: (1) numbers, (2) graphs, (3) musical notes.
 
 Understanding the nature of these group formations helps us to compose, to arrange any given musical material, and to play the most involved rhythmic patterns.
 
@@ -13,4 +13,97 @@ Number values will be used in this system in their normal mathematical operation
 
 \section{Graphing Music}
 
-The graph method used in this system is the general method of graphs, \textit{i.e.}, a record of variation of special components, such as pitch or intensity in music, stocks in finance, diseases in medicine, etc. during a given time-period.
+The graph method used in this system is the general method of graphs, \textit{i.e.}, a record of variation of special components, such as pitch or intensity in music, stocks in finance, diseases in medicine, etc., during a given time-period. In our theory of rhythm we shall deal with time only. The ohorizontal coordinate (known as \textit{abscissa}) reads always from left to right. Here it will express \textit{time}. The vertical coordinate (knownd as \textit{ordinate}) will express the recurrence of a phase, \textit{i.e.}, the moment of attack. This graph method is a general method and therefore objective.
+
+Any wave motion records itself automatically. Let the pendulum of a clock swing uniformly over a strip of paper while the latter is being moved uniformly---and in a direction perpendicular to the movements of the pendulum itself.
+
+Such record will have approximately the appearance of Figure \ref{twowaves}, depending on the speed with which the strip of paper is moving. In case A the speed is less than in case B.
+
+\begin{figure}[tbp]
+	\caption{}
+	\label{twowaves}
+	\begin{tikzpicture}
+
+		\begin{axis}[
+			axis y line=none,
+			axis x line=none,
+			ymax=6,
+			ymin=-6,
+			]
+			\addplot[line width=2pt,smooth,black,mark=none,
+			domain=0:10,samples=80]
+			{sin(deg(2.5*x))}
+			node [] at (500,820) {\huge{A}}
+			;
+		\end{axis}
+
+		\node [anchor=center] at (7.35,2.9) {\huge{or}};
+
+		\hspace{8cm}
+
+
+		\begin{axis}[
+			axis y line=none,
+			axis x line=none,
+			ymax=6,
+			ymin=-6,
+			]
+			\addplot[line width=2pt,smooth,black,mark=none,
+			domain=0:10,samples=80]
+			{sin(deg(1.25*x))}
+			node [] at (500,820) {\huge{B}}
+			;
+		\end{axis}
+
+	\end{tikzpicture}
+\end{figure}
+
+Similar configurations of curves of different degrees of complexity may be ovserved in the projected oscillograms of sound waves. The complexity of a wave depends upon the number of components in such a wave. The simplest wave has the form which is shown in \ref{twowaves}. All clock mechanisms produce such waves (pendulum, sewing machine, etc.). In frequencies which produce musical pitch, the simplest wave may be found in the sound of tuning forks and of the flute-stops of a pipe organ.
+
+The generasl form of th eanlaysis of wave=motino is the Fourier method which Fourier developed in 1822 for the purpose of analyzing \textit{heat}-waves. This method is very precise. It is used in all fields dealing with oscillatory phenomena. Yet it is a very complicated method to use for the purpose of analyzing the music of human performers. It takes about twelve hours to analyze a wave of thirty components. Machines known as harmonic analyzers have been devised. These machines perform the work of an expert mathematician in about ten minutes without any possibility of error. They are used in various fields of physics and in meteorological departments, mainly to predict tidal variations.
+
+The simplest (i.e., one-component) wave of \textit{one period} (recurrence group) has the appearance of Figure \ref{simplest}. The distances $ a \, \alpha \, b $ and $ b \, \alpha' \, a' $ are equal. These curves are \textit{phases} of the wave. Two phases constitue a period. For the purpose of studying periodic groups and their recurrences, we shall use \textit{phases} as units of measurement. In continuous sequence they constitue the \textit{periodicity of phases}.
+
+\begin{figure}[tbp]
+	\caption{}
+	\label{simplest}
+	\begin{tikzpicture}[scale=2.2]
+		\begin{axis}[
+			axis y line=none,
+			axis x line=none,
+			xtick=\empty,
+			xmax=40,
+			ymax=4,
+			ymin=-4,
+			]
+			\draw[dashed,black] (0,400) -- (400,400) node[anchor=north west] {};
+			\node[anchor=south] at (250,400) {$a'$};
+			\node[anchor=south] at (130,400) {$b$};
+			\node[anchor=south east] at (0,400) {$a$};
+			\node[anchor=south] at (63,500) {$\alpha$};
+			\node[anchor=north west] at (175,300) {$\alpha'$};
+			\draw[<->,black] (63,405) -- (63, 495) {};
+			\node[anchor=north] at (63,400) {$\beta$};
+			\draw[<->,black] (190,395) -- (190, 305) {};
+			\node[anchor=south] at (190,400) {$\beta'$};
+			\addplot[
+			line width=1pt,
+			smooth,
+			black,
+			domain=0:25,
+			samples=50
+			]{sin(deg(0.251*x))};
+		\end{axis}
+	\end{tikzpicture}
+\end{figure}
+
+The distances, $ \alpha \beta $ and $ \alpha' \, \beta' $, are equal, and constitute \textit{amplitudes}. The latter are physical expressions of \textit{intensity}.
+
+We shall consider intensity in the study of durations in reference to accents only. The coincidence of phases of two different priodicities intensifies the attack. The recurrence of intensified attacks (\say{accents}) will constitue musical measures (\say{bars}). The reality of \say{bars} depends actually on the placement of attacks, not on the placement of bar lines on music paper.
+
+By assuming that the arrangement of durations does not necessitate the expression of amplitudes, we shall use rhythm graphs in the form of Figure \ref{firstgraphexample}.
+
+\begin{figure}
+	\caption{}
+	\label{firstgraphexample}
+\end{figure}
